@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>resouce/ico.qrc</file>
+        <file>resouce/qtconfig.ico</file>
+        <file>resouce/qt_extended_16x16.png</file>
+        <file>resouce/qt_extended_32x32.ico</file>
+        <file>resouce/qt_extended_48x48.png</file>
+    </qresource>
+</RCC>

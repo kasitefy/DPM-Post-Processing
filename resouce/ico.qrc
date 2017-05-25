@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qt_extended_16x16.png</file>
+        <file>qt_extended_48x48.png</file>
+        <file>qt_extended_32x32.ico</file>
+    </qresource>
+</RCC>
