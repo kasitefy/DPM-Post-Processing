@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>739</width>
-    <height>414</height>
+    <width>774</width>
+    <height>435</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -23,8 +23,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>300</y>
+      <x>250</x>
+      <y>330</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -36,10 +36,10 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>10</y>
+      <x>390</x>
+      <y>20</y>
       <width>371</width>
-      <height>311</height>
+      <height>321</height>
      </rect>
     </property>
     <column>
@@ -54,136 +54,119 @@
     </column>
     <column>
      <property name="text">
-      <string>Concentration</string>
+      <string>Number</string>
      </property>
     </column>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>21</y>
-      <width>271</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>颗粒总数：</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="total">
-       <property name="text">
-        <string>0</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>220</y>
-      <width>281</width>
-      <height>68</height>
+      <y>230</y>
+      <width>361</width>
+      <height>100</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_7">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QCheckBox" name="checkBox">
-         <property name="text">
-          <string>附加条件</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="percent_checkBox">
-         <property name="text">
-          <string>百分数显示</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QCheckBox" name="face_checkBox">
-         <property name="text">
-          <string>在切割点附近计数</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <property name="title">
+     <string>Additional Option</string>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
           <widget class="QLabel" name="label_7">
            <property name="text">
-            <string>误差eps：</string>
+            <string>Error：</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="eps_lineEdit"/>
+          <widget class="QLineEdit" name="eps_lineEdit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
          </item>
         </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>For HTPS</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="mf_checkBox">
+         <property name="text">
+          <string>Enalbe MultiFilter</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="percent_checkBox">
+         <property name="text">
+          <string>Show in Percantage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="face_checkBox">
+         <property name="text">
+          <string>Near Surface Caculation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="ave_checkBox">
+         <property name="text">
+          <string>Show average value</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>80</y>
-      <width>281</width>
-      <height>121</height>
+      <y>20</y>
+      <width>311</width>
+      <height>191</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>最小值：</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="minLineEdit">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>200</width>
-           <height>20</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="title">
+     <string>Main Option</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="3" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
           <string>最大值：</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>28</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <widget class="QLineEdit" name="maxLineEdit">
@@ -203,14 +186,67 @@
        </item>
       </layout>
      </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item row="2" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>最小值：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>28</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="minLineEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="4" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
         <widget class="QLabel" name="label_3">
          <property name="text">
           <string>切分数量：</string>
          </property>
         </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>13</width>
+           <height>17</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <widget class="QLineEdit" name="divLineEdit">
@@ -230,109 +266,200 @@
        </item>
       </layout>
      </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>11</x>
-      <y>50</y>
-      <width>271</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>筛选指标：</string>
-       </property>
-      </widget>
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>颗粒总数：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>17</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="total">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
-     <item>
-      <widget class="QComboBox" name="comboBox">
-       <property name="minimumSize">
-        <size>
-         <width>200</width>
-         <height>0</height>
-        </size>
-       </property>
+     <item row="1" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <property name="text">
-         <string>ParticleResidenceTime</string>
-        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>筛选指标：</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>ParticleXPosition</string>
-        </property>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>13</width>
+           <height>17</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
-        <property name="text">
-         <string>ParticleYPosition</string>
-        </property>
+        <widget class="QComboBox" name="comboBox">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>ParticleResidenceTime</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleXPosition</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleYPosition</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleZPosition</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleXVelocity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleYVelocity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleZVelocity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleDiameter</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleTemperature</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleDensity </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleMass </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ParticleNumberinParcel</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>目标参数：</string>
+         </property>
+        </widget>
        </item>
        <item>
-        <property name="text">
-         <string>ParticleZPosition</string>
-        </property>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
-        <property name="text">
-         <string>ParticleXVelocity</string>
-        </property>
+        <widget class="QComboBox" name="aim_comboBox">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>Number</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TotalMass</string>
+          </property>
+         </item>
+        </widget>
        </item>
-       <item>
-        <property name="text">
-         <string>ParticleYVelocity</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ParticleZVelocity</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ParticleDiameter</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ParticleTemperature</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ParticleDensity </string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ParticleMass </string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>ParticleNumberinParcel</string>
-        </property>
-       </item>
-      </widget>
+      </layout>
      </item>
     </layout>
-   </widget>
-   <widget class="QCheckBox" name="mf_checkBox">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>300</y>
-      <width>131</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Enalbe MultiFilter</string>
-    </property>
    </widget>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -356,7 +483,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>739</width>
+     <width>774</width>
      <height>23</height>
     </rect>
    </property>

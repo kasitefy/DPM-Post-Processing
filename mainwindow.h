@@ -12,19 +12,21 @@
 #include "range.h"
 #include <map>
 
-namespace Ui {
+namespace Ui
+{
 class MainWindow;
 
 }
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
     friend class cplot;
-  public:
+public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-  private slots:
+private slots:
     //calculate button
     void on_pushButton_clicked();
 
@@ -76,7 +78,11 @@ class MainWindow : public QMainWindow {
     //show multifilter window
     void on_actionMultifillter_triggered();
 
-  private:
+    void on_aim_comboBox_currentIndexChanged(const QString &arg1);
+
+    void on_divLineEdit_editingFinished();
+
+private:
     Ui::MainWindow *ui;//main window
 
     std::vector<point> v;//origin data
@@ -89,27 +95,29 @@ class MainWindow : public QMainWindow {
 
     std::vector<double> c;//divide point
 
-    std::vector<double> ans,count;//result
+    std::vector<double> ans, count; //result
 
     QString saveFileName;//save path
 
-    int div=10,tot=0;//number of divide part and number of particle
+    int div = 10, tot = 0; //number of divide part and number of particle
 
-    std::vector<double> vmax,vmin;//range of variable, calculated in the open file step
+    std::vector<double> vmax, vmin; //range of variable, calculated in the open file step
 
-    double max,min;//user seted range
+    double max, min; //user seted range
 
     QStringList label;//table title
 
     QStringList label_combobox;//combobox title, calculated in the open file step
 
+    QStringList label_aim;//aim_combobox titles
+
     QStringList fore;//discribe informaton
 
-    int kt=0;//current cumbo box index
+    int kt = 0; //current cumbo box index
 
-    int cn=12;//number of variables
+    int cn = 12; //number of variables
 
-    std::map<QString,range> mp;//store multifilter range
+    std::map<QString, range> mp; //store multifilter range
 
 };
 

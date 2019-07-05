@@ -10,23 +10,25 @@
 #include <map>
 #include "range.h"
 
-namespace Ui {
-class ExportData;
+namespace Ui
+{
+    class ExportData;
 }
 
-class ExportData : public QDialog {
+class ExportData : public QDialog
+{
     Q_OBJECT
 
-  public:
-    explicit ExportData(std::vector<point>& Data, QStringList& frontInfor,
-                        QStringList& Label,QString& SavePath,std::vector<double> &Min,
-                        std::vector<double> &Max,std::map<QString,range> &MapRange, QWidget *parent = 0);
+public:
+    explicit ExportData( std::vector<point> &Data, QStringList &frontInfor,
+                         QStringList &Label, QString &SavePath, std::vector<double> &Min,
+                         std::vector<double> &Max, std::map<QString, range> &MapRange, QWidget *parent = 0 );
     ~ExportData();
 
-    void setEnableMultiFilter(bool st);
+    void setEnableMultiFilter( bool st );
 
-  private slots:
-    void on_comboBox_currentIndexChanged(const QString &arg1);
+private slots:
+    void on_comboBox_currentIndexChanged( const QString &arg1 );
 
     void on_valuelineEdit_editingFinished();
 
@@ -36,16 +38,17 @@ class ExportData : public QDialog {
 
     void on_mexport_pushButton_clicked();
 
-  private:
+    int find( QString str );
+private:
     Ui::ExportData *ui;
-    QStringList& qsl;//reference to front information
-    QStringList& label;//reference to label_combobox
-    std::vector<point>& data;//reference to original data
-    int kt=0;
-    double min=0,max=0;
-    std::vector<double>&vmin,&vmax;
-    QString& savePath;//reference to original save path
-    std::map<QString,range> &mp;
+    QStringList &qsl;//reference to front information
+    QStringList &label;//reference to label_combobox
+    std::vector<point> &data;//reference to original data
+    int kt = 0;
+    double min = 0, max = 0;
+    std::vector<double> &vmin, &vmax;
+    QString &savePath;//reference to original save path
+    std::map<QString, range> &mp;
     bool enableMF;
 };
 

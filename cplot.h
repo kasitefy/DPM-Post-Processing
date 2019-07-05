@@ -6,7 +6,8 @@
 #include <vector>
 #include "qcustomplot.h"
 
-namespace Ui {
+namespace Ui
+{
 class cplot;
 }
 
@@ -17,7 +18,7 @@ class cplot : public QDialog
 public:
     explicit cplot(QWidget *parent = 0);
     ~cplot();
-    void add(std::vector<double> &x,std::vector<double> &y);
+    void add(std::vector<double> &x, std::vector<double> &y);
 
 
 private:

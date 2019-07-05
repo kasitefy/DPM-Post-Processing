@@ -28,7 +28,8 @@ HEADERS  += mainwindow.h \
     cplot.h \
     exportdata.h \
     multifilter.h \
-    range.h
+    range.h \
+    mathmethod.h
 
 FORMS    += mainwindow.ui \
     cplot.ui \

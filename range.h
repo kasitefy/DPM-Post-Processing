@@ -6,21 +6,22 @@
 #include "point.h"
 #include <QStringList>
 
-class range {
-  public:
+class range
+{
+public:
     //constructor
     range();
-    range(double mi,double ma);
+    range(double mi, double ma);
     //public data
-    double min,max;
+    double min, max;
     //method
     bool inrange(double& k);
 
     void update(double &mi, double &ma);
 
-    static bool inrange(range& temp,double &k);
+    static bool inrange(range& temp, double &k);
 
-    static bool inrange(point &Point, std::map<QString,range> &MapRange, QStringList &Label);
+    static bool inrange(point &Point, std::map<QString, range> &MapRange, QStringList &Label);
 };
 
 
